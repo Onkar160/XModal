@@ -50,8 +50,8 @@ export default function Modal({ setOpen }) {
   };
 
   return (
-    <div className="modal">
-      <div className="modal-content">
+    <div className="modal" onClick={() => setOpen(false)}>
+      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <h1>Fill Details</h1>
         <form className="formContainer" onSubmit={formSubmit}>
           <label htmlFor="username">Username:</label>
