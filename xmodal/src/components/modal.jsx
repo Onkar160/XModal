@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import styles from "./modal.module.css";
+import "./modal.css";
 
 export default function Modal({ setOpen }) {
   const [formData, setFormData] = useState({
@@ -50,10 +50,10 @@ export default function Modal({ setOpen }) {
   };
 
   return (
-    <div className={styles.modal}>
-      <div className={styles["modal-content"]}>
+    <div className="modal">
+      <div className="modal-content">
         <h1>Fill Details</h1>
-        <form className={styles.formContainer} onSubmit={formSubmit}>
+        <form className="formContainer" onSubmit={formSubmit}>
           <label htmlFor="username">Username:</label>
           <input
             type="text"
@@ -90,7 +90,7 @@ export default function Modal({ setOpen }) {
             onChange={handleInput}
             required
           />
-          <button type="submit" className={styles["submit-button"]}>
+          <button type="submit" className="submit-button">
             Submit
           </button>
         </form>
